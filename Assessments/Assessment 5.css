@@ -1,0 +1,34 @@
+h1{
+    text-align: center;
+    font-family: 'Lugrasimo', cursive;
+}
+table{
+    margin: auto;
+    width: 550px;
+    height: 275px;
+    border: none;
+    border-spacing: 7px;
+    
+}
+
+.one{
+    background-color: #2D3047;
+}
+
+#two{
+    background-color: #419D78;
+}
+
+#three{
+    background-color:#E0A458 ;
+}
+
+#four{
+    background-color: #FFDBB5;
+   
+}
+
+#five{
+    background-color: #C04ABC;
+}
+

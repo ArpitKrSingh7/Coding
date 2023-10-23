@@ -1,0 +1,38 @@
+body{
+    font-family: montserrat;
+    background-color: #011627;
+    color: aliceblue;
+    border: solid 60px #2EC4B6 ;
+    border-top: none;
+    padding-top: 20px;
+}
+
+.p1{
+     padding-top: 80px;
+     padding-left: 5em;
+     padding-right: 5em;
+     padding-bottom: 1em;
+}
+.p2{
+    padding-top: 10px;
+     padding-left: 5em;
+     padding-right: 5em;
+     padding-bottom: 1em;
+}
+
+
+input{
+    height: 35px;
+    width: 19em;
+    border: #2EC4B6 1px solid;
+}
+
+#Submit{
+    border: #011627 solid 2px;
+    border-radius: 20px;
+    height: 75px;
+    width: 150px;
+    font-size: larger;
+    background-color: orange;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

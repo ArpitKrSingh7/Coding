@@ -1,0 +1,41 @@
+body{
+    background-color: aqua;
+}
+
+h1{
+    border: 1px solid black;
+}
+
+.thanks{
+    background-color: khaki;
+}
+
+h2{
+    color: rgb(251, 255, 0);
+}
+
+.line1{
+    color: rgb(251, 255, 0);
+    text-decoration: overline;
+}
+
+a{
+    color: red;
+}
+
+.textarea1{
+    border: 5px solid grey ;
+    width: 799px;
+    height: 400px;
+
+}
+
+input{
+    border: solid 2px red;
+}
+
+.hello{
+    background-color: blue;
+    border: 5px  yellow;
+    border-style: dashed;
+}
