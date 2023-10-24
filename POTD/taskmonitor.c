@@ -46,6 +46,69 @@
 
 
 
+// #include <stdio.h>
+// #include <string.h>
+// #include <math.h>
+// #include <stdlib.h>
+
+// int main() {
+
+//     /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+//     int n,i,j,W,t=0,m=0;
+//     scanf("%d",&n);
+//     int N[n];
+//     for(i=0;i<n;i++)
+//     {
+//         scanf("%d",&N[i]);
+//     }
+    
+//     scanf("%d",&W);
+    
+    
+    
+// while(t!=n)
+
+// {    
+//     for(i=0;i<n;i++)
+//     {
+        
+//         if(N[i]>W)
+//         {
+//             N[i] = N[i] - W;
+//         }
+        
+//         else 
+//         {
+//             N[i]=0;
+//         }
+        
+//     }
+    
+//     for(j=0;j<n;j++)
+//       {
+//           if(N[j]==0)
+//           {
+//               t++;
+//           }
+//       }
+        
+//         m++;
+//         if(t==n)
+//         {
+//             break;
+//         }
+        
+        
+        
+//         t=0;
+    
+// }    
+    
+//     printf("%d",m);
+//     return 0;
+// }
+
+
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
@@ -53,60 +116,29 @@
 
 int main() {
 
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
-    int n,i,j,W,t=0,m=0;
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    
+    int n,i,max=0,W;
     scanf("%d",&n);
     int N[n];
     for(i=0;i<n;i++)
     {
         scanf("%d",&N[i]);
+        if(max<=N[i])
+        {
+            max = N[i];
+        }
     }
     
     scanf("%d",&W);
-    
-    
-    
-while(t!=n)
-
-{    
-    for(i=0;i<n;i++)
+    if(max % W==0)
     {
-        
-        if(N[i]>W)
-        {
-            N[i] = N[i] - W;
-        }
-        
-        else 
-        {
-            N[i]=0;
-        }
-        
+        printf("%d" , max / W);
     }
-    
-    for(j=0;j<n;j++)
-      {
-          if(N[j]==0)
-          {
-              t++;
-          }
-      }
-        
-        m++;
-        if(t==n)
-        {
-            break;
-        }
-        
-        
-        
-        t=0;
-    
-}    
-    
-    printf("%d",m);
-    
-    
+    else
+    {
+        printf("%d", 1 + max / W);
+    }
     
     return 0;
 }
