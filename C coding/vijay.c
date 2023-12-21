@@ -1,54 +1,32 @@
 #include <stdio.h>
 int main ()
 {
-    int a,n,k=1;
-    printf("n : ");
-    scanf("%d",&n);
-    a=2*n -1 ;
-
-    for(int i=1;i<=a;i++)
+    int n,i,j,sum=0,a,b;
+    printf("Enter number of lines : ");
+    scanf("%d", &n);
+    
+    for(i=1;i<=2*n-1;i++)
     {
-        for (int j=1;j<=a;j++)
+        for(j=1;j<=2*n-1;j++)
         {
-            
-            
-            // if(i==1||j==1||i==a||j==a)
-            // {
-            //     printf("%d ",n);
-            // }
-            for(;k<=n;k++)
+            a=i;
+            if(a>n)
             {
-                if(i==k||j==k||i==a-k+1||j==a-k+1)
-                {
-                    printf("%d ", n-k+1);
-                }
-                else
-                {
-                    printf("  ");
-                    
-                }
-                
+                a=2*n-i;
             }
-            // else if (i==2||j==2||i==a-1||j==a-1)
-            // {
-            // printf("%d ",n-1);
-            // }
-            // else if(i==3||j==3||i==a-2||j==a-2)
-            // {
-            //     printf("%d ",n-2);
-            // }
-            // else if(i==4||j==4||i==a-3||j==a-3)
-            // {
-            //     printf("%d ",n-3);
-            // }
-            // else if(i==5||j==5||i==a-4||j==a-4)
-            // {
-            //     printf("%d ",n-4);
-            // }
-            // else
-            // {
-            //     printf("  ");
-            // }
+            b=j;
+            if(b>n)
+            {
+                b=2*n-j;
+            }
+
+            if(b>a)
+            sum=a;
+            else
+            sum=b;
+
+            printf("%d ",n+1-sum);
+
         }
         printf("\n");
     }
