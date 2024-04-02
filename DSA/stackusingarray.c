@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <limits.h>
 void pop();
 void push();
 void peek();
+void display();
 
 int  main()
 {
@@ -9,7 +11,7 @@ int  main()
     int arr[100],top=-1,a=0,i=0;
     while(1)
     {
-        printf("What you want to do? [1]:-Push , [2]:-Pop , [3]:-exit : ");
+        printf("What you want to do? [1]:-Push , [2]:-Pop , [3]:-Peek , [4]:-Display , [5]:-exit : ");
         scanf("%d",&a);
 
 
@@ -29,6 +31,11 @@ int  main()
 
         if(a==4)
         {
+            display(arr,&top);
+        }
+
+        if(a==5)
+        {
             printf("Thanks,See you next time!");
             break;
         }
@@ -39,6 +46,15 @@ int  main()
         i++;
     }
 }
+
+void display(int arr[],int *t)
+{
+    for(int i=0;i<=*t;i++)
+    {
+        printf("%d\n",arr[i]);
+    }
+}
+
 void push(int arr[],int *t)
 {
     if(*t==99)
