@@ -41,7 +41,6 @@
 // The only possible sum that can be created is 1.
 // Therefore, the smallest positive integer that cannot be created is 2.
 
-
 #include <stdio.h>
 
 #include <string.h>
@@ -50,21 +49,21 @@
 
 #include <stdlib.h>
 
-int main() {
+int main()
+{
 
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    int n;
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ int n;
 
-    scanf("%d",&n);
+    scanf("%d", &n);
 
     int N[n];
 
-    for(int i = 0;i<n;i++)
+    for (int i = 0; i < n; i++)
 
-        {
+    {
 
-            scanf("%d",&N[i]);
-
-        }
+        scanf("%d", &N[i]);
+    }
 
     int sum = 0;
 
@@ -74,84 +73,60 @@ int main() {
 
     int totalSubsets = pow(2, n);
 
-    
-
-    for (int i = 0; i < totalSubsets; i++) {
-
-        
+    for (int i = 0; i < totalSubsets; i++)
+    {
 
         // Print the elements of the current subset
 
-        for (int j = 0; j < n; j++) {
+        for (int j = 0; j < n; j++)
+        {
 
-       
-
-            if (i & (1 << j)) {
+            if (i & (1 << j))
+            {
 
                 sum = sum + N[j];
 
-                P[k++]=sum;
-
-               
-
+                P[k++] = sum;
             }
-
         }
 
-      sum = 0;
-
+        sum = 0;
     }
 
     int i = 1;
 
     int flag;
 
-while(1)
+    while (1)
 
     {
 
-        for(int p = 0 ; p<k;p++)
-
-            {
-
-                if(P[p] == i)
-
-                    {
-
-                        flag = 1;
-
-                        break;
-
-                    }
-
-            }
-
-    if(flag == 0)
+        for (int p = 0; p < k; p++)
 
         {
 
-            printf("%d",i);
+            if (P[p] == i)
 
-        return 0;
+            {
 
+                flag = 1;
+
+                break;
+            }
         }
 
-    flag = 0;
+        if (flag == 0)
 
-    i++;
+        {
 
+            printf("%d", i);
+
+            return 0;
+        }
+
+        flag = 0;
+
+        i++;
     }
-
-    
-
-    
-
-        
-
-            
-
-   
-
     return 0;
-
 }
